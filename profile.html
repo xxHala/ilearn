@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+    <head>
+    <style>
+	.btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff; }
+  .btn-outline-primary:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff; }
+  .btn-outline-primary:focus, .btn-outline-primary.focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); }
+  .btn-outline-primary.disabled, .btn-outline-primary:disabled {
+    color: #007bff;
+    background-color: transparent; }
+  .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff; }
+    .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-outline-primary.dropdown-toggle:focus {
+      -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); }
+	  
+	 :root {
+
+    --input-color: #99A3BA;
+    --input-border: #CDD9ED;
+    --input-background: #fff;
+    --input-placeholder: #CBD1DC;
+
+    --input-border-focus: #275EFE;
+
+    --group-color: var(--input-color);
+    --group-border: var(--input-border);
+    --group-background: #EEF4FF;
+
+    --group-color-focus: #fff;
+    --group-border-focus: var(--input-border-focus);
+    --group-background-focus: #678EFE;
+
+}
+
+.form-field {
+    display: block;
+    width: 50%;
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 6px;
+    -webkit-appearance: none;
+    color: var(--input-color);
+    border: 1px solid var(--input-border);
+    background: var(--input-background);
+    transition: border .3s ease;
+    &::placeholder {
+        color: var(--input-placeholder);
+    }
+    &:focus {
+        outline: none;
+        border-color: var(--input-border-focus);
+    }
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    width: 100%;
+    & > span,
+    .form-field {
+        white-space: nowrap;
+        display: block;
+        &:not(:first-child):not(:last-child) {
+            border-radius: 0;
+        }
+        &:first-child {
+            border-radius: 6px 0 0 6px;
+        }
+        &:last-child {
+            border-radius: 0 6px 6px 0;
+        }
+        &:not(:first-child) {
+            margin-left: -1px;
+        }
+    }
+    .form-field {
+        position: relative;
+        z-index: 1;
+        flex: 1 1 auto;
+        width: 1%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    & > span {
+        text-align: center;
+        padding: 8px 12px;
+        font-size: 14px;
+        line-height: 25px;
+        color: var(--group-color);
+        background: var(--group-background);
+        border: 1px solid var(--group-border);
+        transition: background .3s ease, border .3s ease, color .3s ease;
+    }
+    &:focus-within {
+        & > span {
+            color: var(--group-color-focus);
+            background: var(--group-background-focus);
+            border-color: var(--group-border-focus);
+        }
+    }
+}
+
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: inherit;
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+
+// Center
+body {
+    min-height: 100vh;
+    font-family: 'Mukta Malar', Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #F5F9FF;  
+    .form-group {
+        max-width: 360px;
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+
+	</style>
+	
+		
+		<meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>I-LEARN</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <!-- Favicons -->
+        <link href="assets/img/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+        <!-- Vendor CSS Files -->
+		<link href="assets/css/profilestyle.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+		<link href="assets/css/profilestyle.css" rel="stylesheet">
+		 <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		
+
+                        <link href="assets/css/drop.css" rel="stylesheet">
+                        			<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+
+
+    </head>
+    <body onload=" ">
+        <!-- ======= Header ======= -->
+        <header id="header" class="header fixed-top">
+            <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo d-flex align-items-center">
+                    <img src="assets/img/logo.png" alt="">
+                    <span>I-LEARN</span>
+                </a>
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li>
+                             <a class="nav-link scrollto " href="index.html">الصفحة الرئيسية</a>
+                        </li>
+                        <li>
+                          <a class="nav-link scrollto " href="job.html">الوظائف</a>
+                        </li>
+                        <li>
+                            <a class="nav-link scrollto" href="courses.html">الدورات التدريبية</a>
+
+                        </li>
+                        <li>
+                            <a class="nav-link scrollto" href="question.html">الاسئله</a>
+                        </li>
+                        <li>
+                            <a class="nav-link scrollto" href="index.html#team">فريقنا</a>
+                        </li>
+                        
+                        <li id="user">
+                               <script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("user").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getbar",true);
+                                          xmlhttp.send();
+                                          
+                                         //log out 
+
+
+                                           function logOut()
+                                           {
+                                            
+                                            var xmlhttp = new XMLHttpRequest();
+                                            xmlhttp.open("GET","php/userInfo.php?do=logOut",true);
+                                            xmlhttp.send();
+                                            location.href = "http://i-learn.atwebpages.com/index.html"; 
+                                           }
+                                        //-------------------------
+                                        
+                                </script>
+</li>                    <i class="bi bi-list mobile-nav-toggle"></i>
+
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav>
+                <!-- .navbar -->
+            </div>
+        </header>
+            <!-- Hero Area Start-->
+			<br><br><br><br><br>
+			<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="container bootstrap snippets bootdey">
+    <div class="row">
+        <!-- BEGIN USER PROFILE -->
+        <div class="col-md-12">
+            <div class="grid profile">
+                <div class="grid-header">
+                    <div class="col-xs-3 text-right">
+               	 
+                    </div>
+                    <div class="col-xs-7">
+                        <h3 id ="name">
+                        <script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("name").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getname",true);
+                                          xmlhttp.send();
+                                        
+                                </script>
+                                </h3>
+                        
+                        
+                    </div>
+                    
+                    <div class="col-xs-2">
+                        <img id="img"class="img-circle" >
+                        <script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("img").src=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getPhoto",true);
+                                          xmlhttp.send();
+										  
+                                        
+                                </script>
+                                 
+                    </div>
+
+                </div>
+                <div class="grid-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#profile" data-toggle="tab">الصفحة الشخصية</a></li>
+                        <li class=""><a href="#timeline" data-toggle="tab">الاسئلة</a></li>
+                        
+						<li class=""><a href="#photos" data-toggle="tab">الدورات التدريبية الخاصة بي </a></li>
+                        <li class=""><a href="#settings" data-toggle="tab">اعدادات الحساب</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <!-- BEGIN PROFILE -->
+                        <div class="tab-pane active" id="profile">
+						<br>
+                            <p class="lead">الصفحة الشخصية</p>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6">
+                                <p id ="exx"><strong>الايميل:</strong> 
+									<a id="e">
+					            <script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("e").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getEmail",true);
+                                          xmlhttp.send();
+                                        
+                                </script> <button  id="ex" 
+									onclick="myFunction(this.id)"> edit</button></p>
+                                    
+                                    <p><strong>تاريخ الميلاد :</strong> 
+									<a id="b">
+									<script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("b").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getBirth",true);
+                                          xmlhttp.send();
+                                        
+                                </script></a></p>
+                                    
+                         
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>الموقع:</strong> <a id="c">
+									<script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("c").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getcontry",true);
+                                          xmlhttp.send();
+                                        
+                                </script></a></p>
+                                    <p><strong>الهاتف:</strong><a id="p">
+									<script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("p").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getPhone",true);
+                                          xmlhttp.send();
+                                        
+                                </script>
+									</a></p>
+                                
+                                   
+
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <!-- END PROFILE -->
+
+                    <!-- BEGIN Question -->
+                    <br>
+                <!-- END Question -->
+
+                
+
+                <!-- BEGIN SETTINGS -->
+                <div class="tab-pane" id="settings">
+                     <div class="row">
+                                <div class="col-md-6">
+                                <p id ="wxx"><strong>الايميل:</strong> 
+                                <a><script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("e").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getEmail",true);
+                                          xmlhttp.send();
+                                        
+                                </script></a> 
+                                <button  id="wx" class="btn btn-primary mr-md-3 mb-2 mb-md-0" onclick="myFunction1(this.id)"> edit</button></p>
+                                
+                                    <p><strong>تاريخ الميلاد :</strong> 
+									<a id="b">
+									<script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("b").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getBirth",true);
+                                          xmlhttp.send();
+                                        
+                                </script></a> <button  id="wx" class="btn btn-primary mr-md-3 mb-2 mb-md-0"onclick="myFunction(this.id)"> edit</button></p>
+                                    
+								</div>
+                                                                
+                                <div class="col-md-6">
+                                   <p><strong>الموقع:</strong> <a id="c">
+									<script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("c").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getcontry",true);
+                                          xmlhttp.send();
+                                        
+                                </script></a>
+									<button  id="adx"class="btn btn-primary mr-md-3 mb-2 mb-md-0" onclick="myFunction(this.id)"> edit</button></p>
+                                    <p><strong>الهاتف:</strong><a id="p">
+									<script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("p").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getPhone",true);
+                                          xmlhttp.send();
+                                        
+                                </script>
+									</a>
+									<button  id="px" class="btn btn-primary mr-md-3 mb-2 mb-md-0"onclick="myFunction(this.id)"> edit</button></p>
+                                    
+                                   
+                                   
+                                </div>
+                            </div>
+                     
+                           
+                </div>
+                <div class="tab-pane" id="timeline">
+                <div class="row">
+                           <div class="col-md-6">
+
+                           </div>
+                       </div>
+                
+                      
+           </div>
+
+                <!-- END SETTINGS -->
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END USER PROFILE -->
+</div>
+</div>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+function myFunction1(id) {
+    
+	var idx=id+"x";
+	
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "text");
+  x.setAttribute("value", " ");
+  x.setAttribute("class","form-field");
+  x.setAttribute("id","in");
+  var b = document.createElement("BUTTON");
+   b.setAttribute("class","btn btn-primary mr-md-3 mb-2 mb-md-0");
+  b.innerHTML = "Save!";
+  b.addEventListener("click", function() {
+  var xmlhttp = new XMLHttpRequest();
+var e = x.value ;
+                                        
+xmlhttp.open("GET","php/userInfo.php?do=setemail"+e,true);
+xmlhttp.send();
+  });
+
+    var d = document.getElementById(idx);
+    var d_nested = document.getElementById(id);
+    d.removeChild(d_nested);
+    document.getElementById(idx).appendChild(x);
+	document.getElementById(idx).appendChild(b);
+  
+  
+
+}
+	
+
+
+</script>
+      
+               <!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+    <div class="container">
+        <div class="copyright">
+            &copy; Copyright
+            <strong>
+                <span>I-LEARN TEAM</span>
+            </strong>
+            . All Rights Reserved
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+                <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+                    <i class="bi bi-arrow-up-short"></i>
+                </a>
+                <!-- Vendor JS Files -->
+                <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+                <script src="assets/vendor/aos/aos.js"></script>
+                <script src="assets/vendor/php-email-form/validate.js"></script>
+                <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+                <script src="assets/vendor/purecounter/purecounter.js"></script>
+                <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+                <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+                <!-- Template Main JS File -->
+                <script src="assets/js/main.js"></script>
+            <!-- Hero Area End -->    </body>
+    </html>

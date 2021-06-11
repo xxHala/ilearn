@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>I-LEARN</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <!-- Favicons -->
+        <link href="assets/img/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+        <link href="assets/css/QS.css">
+        <script src="assets/js/QuestionPage.js"></script>
+		<script src="app.js"></script>
+                <link href="assets/css/drop.css" rel="stylesheet">
+			<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+		$(document).ready(function(){
+			$(".profile .icon_wrap").click(function(){
+			  $(this).parent().toggleClass("active");
+			  $(".notifications").removeClass("active");
+			});
+
+			$(".notifications .icon_wrap").click(function(){
+			  $(this).parent().toggleClass("active");
+			   $(".profile").removeClass("active");
+			});
+
+			$(".show_all .link").click(function(){
+			  $(".notifications").removeClass("active");
+			  $(".popup").show();
+			});
+
+			$(".close").click(function(){
+			  $(".popup").hide();
+			});
+		});
+                
+                
+               
+
+	</script>
+
+
+       <!-- ======= Header ======= -->
+        <header id="header" class="header fixed-top">
+            <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo d-flex align-items-center">
+                    <img src="assets/img/logo.png" alt="">
+                    <span>I-LEARN</span>
+                </a>
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li>
+                             <a class="nav-link scrollto " href="index.html">الصفحة الرئيسية</a>
+                        </li>
+                        <li>
+                          <a class="nav-link scrollto " href="job.html">الوظائف</a>
+                        </li>
+                        <li>
+                            <a class="nav-link scrollto" href="courses.html">الدورات التدريبية</a>
+
+                        </li>
+                        <li>
+                            <a class="nav-link scrollto active" href="question.html">الاسئله</a>
+                        </li>
+                        <li>
+                            <a class="nav-link scrollto" href="index.html#team">فريقنا</a>
+                        </li>
+                        
+          
+
+                         <li id="user">
+                               <script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("user").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getbar",true);
+                                          xmlhttp.send();
+                                          
+                                         //log out 
+
+
+                                           function logOut()
+                                           {
+                                            
+                                            var xmlhttp = new XMLHttpRequest();
+                                            xmlhttp.open("GET","php/userInfo.php?do=logOut",true);
+                                            xmlhttp.send();
+                                            location.href = "http://i-learn.atwebpages.com/index.html"; 
+                                           }
+                                        //-------------------------
+                                        
+                                </script>
+</li>
+             
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+
+</ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav>
+            </div>
+        </header>
+      </head>   
+
+<body onload="newpost();" style="background-color:aliceblue">
+	<section id="heroz" class="heroz d-flex align-items-center">
+		<div class="container">
+				<div>
+					<h2 data-aos="fade-up" data-aos-delay="400" style="font-family:Lateef;font-size:37px; float:right;" class="aos-init aos-animate"> ضع اي سؤال تحتاج الجواب له</h2>
+					<div data-aos="fade-up" data-aos-delay="600" class="aos-init aos-animate">
+				</div>
+			</div>
+		</div>
+	</section>
+  <div class="body-Question " style ="max-width: 100%;" >
+			<!-- start of main content section -->
+			<div class="mainnotfixed " id="mainnotfixed">
+                        
+                        <!-- Start of post an content -->
+				<div id ="openQ" class="main mainpost m-3 mw-75" style=" display:block; margin-bottom:20px; padding-bottom:10px;" >	
+
+				</div>
+			<!-- End of post an content -->
+				
+				<hr>
+
+
+				<!-- posted content view -->
+				<div class="allpost" id ="allpost">
+					
+
+				</div>
+				<!-- end of posted content view -->
+
+				<!-- button to view more previous post -->
+				<button type="button" id="viewmore" class="viewmore" onclick="newpost();">أظهر المزيد</button>
+			</div>
+			<!-- End of main content section -->
+
+			<!-- start of right section suggestion user -->
+			
+  </div>
+
+</body>
+</html>

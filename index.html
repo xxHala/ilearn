@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>I-LEARN</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <!-- Favicons -->
+        <link href="assets/img/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+               <link href="assets/css/drop.css" rel="stylesheet">
+                        			<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+
+
+    </head>
+    <body onload="allSubject()">
+        <!-- ======= Header ======= -->
+        <header id="header" class="header fixed-top">
+            <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo d-flex align-items-center">
+                    <img src="assets/img/logo.png" alt="">
+                    <span>I-LEARN</span>
+                </a>
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li>
+                             <a class="nav-link scrollto active" href="index.html">الصفحة الرئيسية</a>
+                        </li>
+                        <li>
+                          <a class="nav-link scrollto " href="job.html">الوظائف</a>
+                        </li>
+                        <li>
+                            <a class="nav-link scrollto" href="courses.html">الدورات التدريبية</a>
+
+                        </li>
+                        <li>
+                            <a class="nav-link scrollto" href="question.html">الاسئله</a>
+                        </li>
+                        <li>
+                            <a class="nav-link scrollto" href="index.html#team">فريقنا</a>
+                        </li>
+
+                        <li id="user">
+                                <script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("user").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getbar",true);
+                                          xmlhttp.send();
+                                          
+                                         //log out 
+
+
+                                           function logOut()
+                                           {
+                                            
+                                            var xmlhttp = new XMLHttpRequest();
+                                            xmlhttp.open("GET","php/userInfo.php?do=logOut",true);
+                                            xmlhttp.send();
+                                            location.href = "http://i-learn.atwebpages.com/index.html"; 
+                                           }
+                                        //-------------------------
+                                        
+                                </script>
+</li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav>
+                <!-- .navbar -->
+            </div>
+        </header>
+        <!-- End Header -->
+        <!-- ======= Hero Section ======= -->
+        <section id="hero" class="hero d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 d-flex flex-column justify-content-center">
+                        <h1 style="font-family:Lateef;text-align:center;" data-aos="fade-up">! تعلم معنا في اي وقت وفي اي مكان</h1>
+                        <h2 data-aos="fade-up" data-aos-delay="400" style="font-family:Lateef;text-align:center;">دورات تدريبيه في مجال تكنولوجيا المعلومات والحاسوب تتضمن دروس واضحه وبسيطه حول كيفيه تطوير البرمجه وادارة شبكات الحاسوبيه والحفاظ على الانظمه الرقميه عبر الحاسوب والهاتف</h2>
+                        <div data-aos="fade-up" data-aos-delay="600">
+                            <div id="butt" class="text-center text-lg-start">
+                            <script>
+                            
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText !=1 ) 
+                                         {
+                                         
+                                         document.getElementById("butt").className ="text-center text-lg-start";
+                                         }
+                                         else 
+                                          document.getElementById("butt").className ="d-none text-center text-lg-start";
+                                         
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=session",true);
+                                          xmlhttp.send();
+                                          
+                                         
+                                        
+                         </script>
+                                <a href="login-singup.html" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                                    <span>تعلم الان</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+                        <img src="assets/img/hero.gif" class="img-fluid job-img" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Hero -->
+        <main id="main">
+            <!-- ======= Services Section ======= -->
+            <section id="services" class="services">
+                <div class="container" data-aos="fade-up">
+                    <header class="section-header">
+                    </br>
+                    <p>
+                        يعد متخصصو تكنولوجيا المعلومات من أهم الموظفين في الوقت الحالي
+لذلك نحن نسعى لتقديم أفضل الدورات التدريبية التي تؤهلك للإنضمام الى صفوفهم
+                    </p>
+                </header>
+                
+                
+                
+                <script>
+                 
+                                          function allSubject() 
+{
+
+  var xhttp;
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200)
+    document.getElementById("all").innerHTML = this.responseText; //here
+    //alert(this.responseText);
+  };
+  xhttp.open("GET", "php/coures.php?do=S", true);
+  xhttp.send();     
+  
+
+}
+                </script>
+                
+                <div class="row gy-4" id ="all">
+                    
+</div>
+</div>
+</section>
+<!-- End Services Section -->
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+            <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="content section-header" style="font-size:35px">
+                    <h3 style="font-size:20px">الوظائف</h3>
+                    <h2>تصفح الوظائف المتاحة لدينا في مختلف مجالات تكنولوجيا المعلومات</h2>
+                    <p>
+                      للعثور على الوظائف المتاحة وفرص التدريب
+                    </p>
+                    <div class="text-center text-lg-start">
+                        <a href="job.html" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                            <span>تصفح المزيد</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+                <img src="assets/img/job.gif" class="img-fluid job-img" alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About Section -->
+<!-- End F.A.Q Section -->
+<!-- ======= Portfolio Section ======= -->
+<section id="Ques" class="portfolio">
+    <div class="container" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
+            <div class="row gx-0 about">
+                <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="content section-header" style="font-size:35px">
+                        <h3 style="font-size:30px">الاسئلة </h3>
+                        <h2 style="font-size:30px">للعثور على حل لمشاكلك التقنية </h2>
+                        <p>
+                        </p>
+                        <div class="text-center text-lg-start about">
+                            <a href="question.html" class="btn-read-more btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                                <span>تصفح المزيد</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+                    <img src="assets/img/ques.gif" class="img-fluid job-img" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Portfolio Section -->
+
+<!-- End Features Section -->
+<!-- End Testimonials Section -->
+<!-- ======= Team Section ======= -->
+<section id="team" class="team">
+    <div class="container" data-aos="fade-up">
+        <header class="section-header">
+            <h2>فريقنا </h2>
+        </header>
+        <div class="row gy-4">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                        <div class="social">
+                            <a href="">
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>Hala Azmi</h4>
+                        <span>حلى عزمي </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                        <div class="social">
+                            <a href="">
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>Salsabel Abudiab </h4>
+                        <span>سلسبيل ابو دياب</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                        <div class="social">
+                            <a href="">
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>Aya Khaldi</h4>
+                        <span>آيه الخالدي</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                        <div class="social">
+                            <a href="">
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>Mohanad Mihdawi</h4>
+                        <span>مهند مهداوي </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Team Section -->
+<!-- End Contact Section -->
+</main>
+<!-- End #main -->
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+    <div class="container">
+        <div class="copyright">
+            &copy; Copyright
+            <strong>
+                <span>I-LEARN TEAM</span>
+            </strong>
+            . All Rights Reserved
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>

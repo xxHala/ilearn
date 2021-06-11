@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>I-LEARN</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <!-- Favicons -->
+        <link href="assets/img/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+        <!-- Vendor CSS Files -->
+		  <!-- Font Awesome -->
+  <link rel="stylesheet" href="adminpages/plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="adminpages/dist/css/adminlte.min.css">
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+       <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/job.css" rel="stylesheet">
+		<!--====== Slick css ======-->
+                <link href="assets/img/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+               <link href="assets/css/drop.css" rel="stylesheet">
+                        			<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+    <link rel="stylesheet" href="assets/css/cours/slick.css">
+
+    <!--====== Animate css ======-->
+    <link rel="stylesheet" href="assets/css/cours/animate.css">
+    
+    <!--====== Nice Select css ======-->
+    <link rel="stylesheet" href="assets/css/cours/nice-select.css">
+    
+    <!--====== Nice Number css ======-->
+    <link rel="stylesheet" href="assets/css/cours/jquery.nice-number.min.css">
+
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="assets/css/cours/magnific-popup.css">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/cours/bootstrap.min.css">
+    
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="assets/css/cours/font-awesome.min.css">
+    
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="assets/css/cours/default.css">
+    
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="assets/css/cours/style.css">
+    
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="assets/css/cours/responsive.css">
+
+    </head>
+    <body >
+        <!-- ======= Header ======= -->
+        <header id="header" class="header fixed-top">
+            <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo d-flex align-items-center">
+                    <img src="assets/img/logo.png" alt="">
+                    <span>I-LEARN</span>
+                </a>
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li>
+                             <a class="nav-link scrollto active" href="index.html">الصفحة الرئيسية</a>
+                        </li>
+                        <li>
+                          <a class="nav-link scrollto " href="job.html">الوظائف</a>
+                        </li>
+                        <li>
+                            <a class="nav-link scrollto" href="courses.html">الدورات التدريبية</a>
+
+                        </li>
+                        <li>
+                            <a class="nav-link scrollto" href="question.html">الاسئله</a>
+                        </li>
+                        <li>
+                            <a class="nav-link scrollto" href="index.html#team">فريقنا</a>
+                        </li>
+
+                        <li id="user">
+                                <script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("user").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getbar",true);
+                                          xmlhttp.send();
+                                          
+                                         //log out 
+
+
+                                           function logOut()
+                                           {
+                                            
+                                            var xmlhttp = new XMLHttpRequest();
+                                            xmlhttp.open("GET","php/userInfo.php?do=logOut",true);
+                                            xmlhttp.send();
+                                            location.href = "http://i-learn.atwebpages.com/index.html"; 
+                                           }
+                                        //-------------------------
+                                        
+                                </script>
+</li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav>
+                <!-- .navbar -->
+            </div>
+        </header>
+        <!-- End Header -->
+       
+
+        <!--====== teachers ======-->
+    
+    <section id="teachers-singel" class="pt-70 pb-120 gray-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-8">
+                    <div class="teachers-left mt-50">
+                       
+                            <img id="img"class="img-circle" >
+                        <script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("img").src=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getPhoto",true);
+                                          xmlhttp.send();
+										  
+                                        
+                                </script>
+                                
+                        
+                        <div class="name">
+                            <h6 id ="name"><script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("name").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getname",true);
+                                          xmlhttp.send();
+                                        
+                                </script></h6>
+                            
+                        </div>
+                        <form onsubmit="change()" method="post"enctype="multipart/form-data">
+
+                            <input type="file"  name="my_image">
+
+                            <input type="submit"  name="submit" class="btn btn-primary btn-block"value="تغيير الصورة">
+     	
+                        </form>
+                        <h5 id="m"></h5>
+                        <script>
+
+                                        function change(){
+
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("m").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=setimg",true);
+                                          xmlhttp.send();
+  
+                                            }
+                        </script>
+
+                    </div> <!-- teachers left -->
+                </div>
+                <div class="col-lg-8">
+                    <div class="teachers-right mt-50">
+                        <ul class="nav nav-justified" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="active" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="true">معلومات عامة</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="courses-tab" data-toggle="tab" href="#courses" role="tab" aria-controls="courses" aria-selected="false">الدورات المسجل بها</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">الاسئله</a>
+                            </li>
+                        </ul> <!-- nav -->
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                                <div class="dashboard-cont">
+                                    <div class="singel-dashboard pt-40">
+                                        <h5>البريد الالكتروني :</h5>
+                                        <p id="e">
+                                        <script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("e").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getEmail",true);
+                                          xmlhttp.send();
+                                        
+                                </script>
+                                        </p>
+								
+<!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <form onsubmit="save1()">
+      <div class="modal-header">
+      
+        <h5 class="modal-title" id="exampleModalLabel">هل تريد تعديل المعلومات ؟</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+  <div class="input-group mb-3">
+                  <input type="date" id="in" class="form-control rounded-0">
+                
+                </div>
+      <div class="modal-footer">
+        
+        <button  type="submit"class="btn btn-primary">حفظ</button>
+      </div>
+    </div>
+    </form>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+	<form onsubmit="save2()">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">هل تريد تعديل المعلومات ؟</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+  <div class="input-group mb-3">
+                  <input type="text" id="i"class="form-control rounded-0">
+                
+                </div>
+      <div class="modal-footer">
+        
+        <button type="submit" class="btn btn-primary" onclick="save()">حفظ</button>
+      </div>
+    </div>
+	</form>
+  </div>
+</div>
+                                    </div> 
+	<script>
+
+function save1(){
+
+  var data=document.getElementById("in").value;
+  
+  var xmlhttp = new XMLHttpRequest();
+  
+ xmlhttp.open("GET","php/userInfo.php?do=d"+data,true);
+  xmlhttp.send();
+  
+}
+function save2(){
+
+  var data=document.getElementById("i").value;
+  
+  var xmlhttp = new XMLHttpRequest();
+  
+ xmlhttp.open("GET","php/userInfo.php?do=D"+data,true);
+  xmlhttp.send();
+  
+}
+</script>  								
+									
+<!-- singel dashboard -->
+                                    <div class="singel-dashboard pt-40">
+                                        <h5>تاريخ الميلاد :</h5>
+                                        <p id="b">
+                                        <script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("b").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getBirth",true);
+                                          xmlhttp.send();
+                                        
+                                </script></p>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+  تعديل
+</button>
+                                    </div> <!-- singel dashboard -->
+                                    <div class="singel-dashboard pt-40">
+                                        <h5>الموقع:</h5>
+                                        <p id="c"><script>
+                                         var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("c").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getcontry",true);
+                                          xmlhttp.send();
+                                        
+                                </script></p>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+  تعديل
+</button>
+                                    </div> <!-- singel dashboard -->
+                                </div> <!-- dashboard cont -->
+                            </div>
+                            <div class="tab-pane fade" id="courses" role="tabpanel" aria-labelledby="courses-tab">
+                                <div class="courses-cont pt-20">
+                                    <div class="row" id="co">
+                                  
+                                  <script>
+                                  var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("co").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getcourses",true);
+                                          xmlhttp.send();
+                                  </script>
+                                    </div> <!-- row -->
+                                </div> <!-- courses cont -->
+                            </div>
+                            <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                               <div class="active tab-pane" id="activity">
+                    <!-- Post -->
+					</br>
+         <div id="q">
+          <script>
+                                  var xmlhttp = new XMLHttpRequest();
+                                         xmlhttp.onreadystatechange = function() {
+                                         if (this.readyState == 4 && this.status == 200) {
+                                         if (this.responseText) 
+                                         {
+                                         document.getElementById("q").innerHTML=(this.responseText);
+                                         }
+                                         } };
+                                          xmlhttp.open("GET","php/userInfo.php?do=getquestions",true);
+                                          xmlhttp.send();
+                                  </script>
+         
+         </div>
+                  </div>
+                            </div>
+                        </div> <!-- tab content -->
+                    </div> <!-- teachers right -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    
+    <!--====== COURSES SINGEl PART ENDS ======-->
+       
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+    <div class="container">
+        <div class="copyright">
+            &copy; Copyright
+            <strong>
+                <span>I-LEARN TEAM</span>
+            </strong>
+            . All Rights Reserved
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+                <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+                    <i class="bi bi-arrow-up-short"></i>
+                </a>
+                <!-- Vendor JS Files -->
+				<!--====== jquery js ======-->
+    <script src="assets/js/cours/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/cours/vendor/jquery-1.12.4.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/cours/bootstrap.min.js"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="assets/js/cours/slick.min.js"></script>
+    
+    <!--====== Magnific Popup js ======-->
+    <script src="assets/js/cours/jquery.magnific-popup.min.js"></script>
+    
+    <!--====== Counter Up js ======-->
+    <script src="assets/js/cours/waypoints.min.js"></script>
+    <script src="assets/js/cours/jquery.counterup.min.js"></script>
+    
+    <!--====== Nice Select js ======-->
+    <script src="assets/js/cours/jquery.nice-select.min.js"></script>
+    
+    <!--====== Nice Number js ======-->
+    <script src="assets/js/cours/jquery.nice-number.min.js"></script>
+    
+    <!--====== Count Down js ======-->
+    <script src="assets/js/cours/jquery.countdown.min.js"></script>
+    
+    <!--====== Validator js ======-->
+    <script src="assets/js/cours/validator.min.js"></script>
+    
+    <!--====== Ajax Contact js ======-->
+    <script src="assets/js/cours/ajax-contact.js"></script>
+    
+    <!--====== Main js ======-->
+    <script src="assets/js/cours/main.js"></script>
+    
+    <!--====== Map js ======-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
+    <script src="assets/js/cours/map-script.js"></script>
+                <script src="adminpages/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="adminpages/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="adminpages/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="adminpages/dist/js/demo.js"></script>
+            <!-- Hero Area End -->   
+
+			</body>
+			
+			
+    </html>
